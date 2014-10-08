@@ -197,4 +197,62 @@ describe("permutation functions", function () {
 							 '3': 3 }));
 		});
 	});
+
+
+	describe("inverse function", function() {
+		it("should correctly invert an arbitrary permutation", function () {
+			var p1 = {"a": "b", "b": "c", "c": "a"};
+			var p2 = {"a": "c", "b": "a", "c": "b"};
+
+			assert(orbit.permutationsEqual(orbit.inverse(p1), p2));
+		});
+
+		it("should correctly invert an arbitrary permutation (double invert)", function () {
+			var p1 = {"a": "b", "b": "c", "c": "a"};
+			assert(orbit.permutationsEqual(p1, orbit.inverse(orbit.inverse(p1))));
+		});
+
+		it("should correctly invert an arbitrary permutation (double invert)", function () {
+			var cycle1 = [1, 2, 3];
+			var p1 = orbit.cycleToPerm(cycle1);
+			assert(orbit.permutationsEqual(p1, orbit.inverse(orbit.inverse(p1))));
+		});
+
+	});
+
+	describe("isIdentity()", function () {
+		it("should correctly identify an arbitrary identity", function () {
+			var p1 = {"a": "a", "b": "b"};
+			assert(orbit.isIdentity(p1));
+		});
+
+		it("should correctly identify a perm compsoed with its inverse", function () {
+			var p1 = {"a": "b", "b": "c", "c": "a"};
+			assert(orbit.isIdentity(orbit.composePermutations(p1, orbit.inverse(p1))));
+		});
+
+		it("should correctly identify a perm compsoed with its inverse", function () {
+			var cycle1 = [1, 2, 3, 4];
+			var p1 = orbit.cycleToPerm(cycle1);
+			assert(orbit.isIdentity(orbit.composePermutations(p1, orbit.inverse(p1))));
+		});
+
+		it("should correctly identify a perm compsoed with its inverse", function () {
+			var cycle1 = [1, 2, 3, 4];
+			var cycle2 = [5, 2, 9, 4];
+			var p1 = orbit.composePermutations(orbit.cycleToPerm(cycle1),
+							   orbit.cycleToPerm(cycle2));
+			assert(orbit.isIdentity(orbit.composePermutations(p1, orbit.inverse(p1))));
+		});
+
+		it("should correctly identify a perm compsoed with its inverse", function () {
+			var cycle1 = [1, 2, 3, "a", 4, "d"];
+			var cycle2 = [5, 2, 9, 4];
+			var p1 = orbit.composePermutations(orbit.cycleToPerm(cycle1),
+							   orbit.cycleToPerm(cycle2));
+			assert(orbit.isIdentity(orbit.composePermutations(p1, orbit.inverse(p1))));
+		});
+	});
+
+
 });

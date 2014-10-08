@@ -79,4 +79,28 @@ function composePermutations(perm1, perm2) {
 	return composition;
 }
 
+module.exports.inverse = inverse;
+function inverse(perm) {
+	var toR = {};
 
+	for (var p in perm) {
+		if (perm.hasOwnProperty(p)) {
+			toR[perm[p]] = p;
+		}
+	}
+
+	return toR;
+}
+
+module.exports.isIdentity = isIdentity;
+function isIdentity(perm) {
+	for (var p in perm) {
+		if (perm.hasOwnProperty(p)) {
+			if (perm[p] != p) {
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
