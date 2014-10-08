@@ -1,0 +1,82 @@
+
+module.exports.checkPermutation = checkPermutation;
+function checkPermutation(perm) {
+	// check to see if the permutation is valid
+
+	var image = [];
+	for (var p in perm) {
+		if (perm.hasOwnProperty(p)) {
+			image.push(perm[p]);
+		}
+	}
+
+	return image.every(function (p) {
+		return perm.hasOwnProperty(p);
+	});
+}
+
+
+module.exports.permutationsEqual = permutationsEqual;
+function permutationsEqual(perm1, perm2) {
+	return permInPerm(perm1, perm2) && permInPerm(perm2, perm1);
+}
+
+function permInPerm(perm1, perm2) {
+	var image = [];
+	for (var p in perm1) {
+		if (perm1.hasOwnProperty(p)) {
+			if (perm2[p] != perm1[p])
+				return false;
+		}
+	}
+
+	return true;
+}
+
+module.exports.cycleToPerm = cycleToPerm;
+function cycleToPerm(cycle) {
+
+	var last = false;
+	var perm = {};
+	cycle.forEach(function (i) {
+		if (last) {
+			perm[last] = i;
+		}
+
+		last = i;
+	});
+
+	perm[cycle[cycle.length - 1]] = cycle[0];
+	return perm;
+}
+
+module.exports.composePermutations = composePermutations;
+function composePermutations(perm1, perm2) {
+	var composition = {};
+	for (var p in perm2) {
+		if (perm2.hasOwnProperty(p)) {
+			var result = perm2[p];
+			if (perm1.hasOwnProperty(result)) {
+				// modified by perm1 and perm2
+				composition[p] = perm1[perm2[p]];
+			} else {
+				// modified by perm2, left alone by perm1
+				composition[p] = perm2[p];
+			}
+		}
+	}
+
+	// make sure we also get things in perm1 that are
+	// left alone by perm2
+	for (var p in perm1) {
+		if (perm1.hasOwnProperty(p)) {
+			if (!perm2.hasOwnProperty(p)) {
+				composition[p] = perm1[p];
+			}
+		}
+	}
+
+	return composition;
+}
+
+
