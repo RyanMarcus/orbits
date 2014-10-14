@@ -104,3 +104,55 @@ function isIdentity(perm) {
 
 	return true;
 }
+
+module.exports.orbits = orbits;
+function orbits(perm) {
+	var orbits = [];
+	var accountedFor = [];
+
+	for (var p in perm) {
+		if (perm.hasOwnProperty(p)) {
+			if (accountedFor.indexOf(String(p)) != -1)
+				continue; // already in a cycle
+
+			var orbit = [];
+			orbit.push(String(p));
+			accountedFor.push(String(p));
+			var j = perm[p];
+			while (accountedFor.indexOf(String(j)) == -1) {
+				orbit.push(String(j));
+				accountedFor.push(String(j));
+				j = perm[j];
+			}
+			orbits.push(orbit);
+		}
+	}
+
+	return orbits;
+}
+
+function transpositionDecomposition(perm) {
+	var orb = orbits(perm);
+	var toR = [];
+	
+	orb.forEach(function (i) {
+		console.log("Decomposing orbit: " + i);
+		console.log(decomposeCycle(i));
+	});
+}
+
+function decomposeCycle(cycle) {
+	var toR = [];
+	cycle.forEach(function(elm, idx, ary) {
+		if (idx == ary.length - 1)
+			return;
+
+		toR.push([elm, ary[idx + 1]]);
+	});
+
+	return toR;
+}
+
+console.log(transpositionDecomposition({'1': '2',
+					'2': '3',
+					'3': '1'}));
