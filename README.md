@@ -5,6 +5,7 @@
 
 [![Dependency Status](https://david-dm.org/ryanmarcus/orbits.svg)](https://david-dm.org/ryanmarcus/orbits)
 
+[![Code Climate](https://codeclimate.com/github/RyanMarcus/orbits/badges/gpa.svg)](https://codeclimate.com/github/RyanMarcus/orbits)
 
 A library for manipulating arbitrary permutations. It is capable of:
 

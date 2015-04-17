@@ -38,11 +38,9 @@ function permutationsEqual(perm1, perm2) {
 }
 
 function permInPerm(perm1, perm2) {
-	var image = [];
 	for (var p in perm1) {
 		if (perm1.hasOwnProperty(p)) {
-			if (perm2[p] != perm1[p])
-				return false;
+			if (perm2[p] != perm1[p]) return false;
 		}
 	}
 
@@ -84,10 +82,10 @@ function composePermutations(perm1, perm2) {
 
 	// make sure we also get things in perm1 that are
 	// left alone by perm2
-	for (var p in perm1) {
-		if (perm1.hasOwnProperty(p)) {
-			if (!perm2.hasOwnProperty(p)) {
-				composition[p] = perm1[p];
+	for (var p2 in perm1) {
+		if (perm1.hasOwnProperty(p2)) {
+			if (!perm2.hasOwnProperty(p2)) {
+				composition[p2] = perm1[p2];
 			}
 		}
 	}
@@ -123,7 +121,7 @@ function isIdentity(perm) {
 
 module.exports.orbits = orbits;
 function orbits(perm) {
-	var orbits = [];
+	var toR = [];
 	var accountedFor = [];
 
 	for (var p in perm) {
@@ -140,11 +138,11 @@ function orbits(perm) {
 				accountedFor.push(String(j));
 				j = perm[j];
 			}
-			orbits.push(orbit);
+			toR.push(orbit);
 		}
 	}
 
-	return orbits;
+	return toR;
 }
 
 module.exports.transpositionDecomposition = transpositionDecomposition;
