@@ -131,14 +131,20 @@ function orbits(perm) {
 	return orbits;
 }
 
+module.exports.transpositionDecomposition = transpositionDecomposition;
 function transpositionDecomposition(perm) {
 	var orb = orbits(perm);
 	var toR = [];
 	
 	orb.forEach(function (i) {
-		console.log("Decomposing orbit: " + i);
-		console.log(decomposeCycle(i));
+		//console.log("Decomposing orbit: " + i);
+		toR.push(decomposeCycle(i));
 	});
+
+	
+	var flatten = [];
+	flatten = flatten.concat.apply(flatten, toR);
+	return flatten;
 }
 
 function decomposeCycle(cycle) {
@@ -153,6 +159,3 @@ function decomposeCycle(cycle) {
 	return toR;
 }
 
-console.log(transpositionDecomposition({'1': '2',
-					'2': '3',
-					'3': '1'}));
