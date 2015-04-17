@@ -1,6 +1,6 @@
 [ ![Codeship Status for RyanMarcus/orbit](https://www.codeship.io/projects/cd23dd10-36c9-0132-5705-2a2ee4030446/status)](https://www.codeship.io/projects/41501)
 
-[![NPM](https://nodei.co/npm/dirty-json.png?compact=true)](https://nodei.co/npm/orbits/)
+[![NPM](https://nodei.co/npm/orbits.png?compact=true)](https://nodei.co/npm/orbits/)
 
 ![Dependency monitor](https://david-dm.org/ryanmarcus/orbits.png)
 
