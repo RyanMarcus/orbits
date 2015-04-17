@@ -2,7 +2,9 @@
 
 [![NPM](https://nodei.co/npm/orbits.png?compact=true)](https://nodei.co/npm/orbits/)
 
-![Dependency monitor](https://david-dm.org/ryanmarcus/orbits.png)
+
+[![Dependency Status](https://david-dm.org/ryanmarcus/orbits.svg)](https://david-dm.org/ryanmarcus/orbits)
+
 
 A library for manipulating arbitrary permutations. It is capable of:
 
