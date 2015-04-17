@@ -126,8 +126,8 @@ function orbits(perm) {
 
 	for (var p in perm) {
 		if (perm.hasOwnProperty(p)) {
-			if (accountedFor.indexOf(String(p)) != -1)
-				continue; // already in a cycle
+			// already in a cycle
+			if (accountedFor.indexOf(String(p)) != -1) continue; 
 
 			var orbit = [];
 			orbit.push(String(p));
@@ -164,8 +164,7 @@ function transpositionDecomposition(perm) {
 function decomposeCycle(cycle) {
 	var toR = [];
 	cycle.forEach(function(elm, idx, ary) {
-		if (idx == ary.length - 1)
-			return;
+		if (idx == ary.length - 1) return;
 
 		toR.push([elm, ary[idx + 1]]);
 	});
