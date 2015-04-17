@@ -1,6 +1,6 @@
 
 var assert = require("assert");
-var orbit = require("../orbit");
+var orbit = require("../orbits");
 
 describe("permutation functions", function () {
 	describe("check function", function () {

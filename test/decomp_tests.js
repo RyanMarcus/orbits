@@ -1,5 +1,5 @@
 var assert = require("assert");
-var orbit = require("../orbit");
+var orbit = require("../orbits");
 
 
 

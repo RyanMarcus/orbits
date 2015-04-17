@@ -1,8 +1,8 @@
 {
-  "name": "orbit",
+  "name": "orbits",
   "version": "0.0.0",
   "description": "Library to work on permutations",
-  "main": "orbit.js",
+  "main": "orbits.js",
   "directories": {
     "test": "test"
   },
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RyanMarcus/orbit.git"
+    "url": "https://github.com/RyanMarcus/orbits.git"
   },
   "keywords": [
     "abstract",
@@ -21,9 +21,9 @@
   "author": "Ryan Marcus <ryan@rmarcus>",
   "license": "GNU GPLv3",
   "bugs": {
-    "url": "https://github.com/RyanMarcus/orbit/issues"
+    "url": "https://github.com/RyanMarcus/orbits/issues"
   },
-  "homepage": "https://github.com/RyanMarcus/orbit",
+  "homepage": "https://github.com/RyanMarcus/orbits",
   "dependencies": {
     "mocha": "^2.2.4"
   }
