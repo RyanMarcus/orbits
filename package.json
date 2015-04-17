@@ -1,30 +1,30 @@
 {
-  "name": "orbits",
-  "version": "0.0.0",
-  "description": "Library to work on permutations",
-  "main": "orbits.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "node_modules/mocha/bin/mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/RyanMarcus/orbits.git"
-  },
-  "keywords": [
-    "abstract",
-    "algebra",
-    "permutation"
-  ],
-  "author": "Ryan Marcus <ryan@rmarcus>",
-  "license": "GNU GPLv3",
-  "bugs": {
-    "url": "https://github.com/RyanMarcus/orbits/issues"
-  },
-  "homepage": "https://github.com/RyanMarcus/orbits",
-  "dependencies": {
-    "mocha": "^2.2.4"
-  }
+    "name": "orbits",
+    "version": "0.0.0",
+    "description": "Library to work on permutations",
+    "main": "orbits.js",
+    "directories": {
+	"test": "test"
+    },
+    "scripts": {
+	"test": "node_modules/mocha/bin/mocha"
+    },
+    "repository": {
+	"type": "git",
+	"url": "https://github.com/RyanMarcus/orbits.git"
+    },
+    "keywords": [
+	"abstract",
+	"algebra",
+	"permutation"
+    ],
+    "author": "Ryan Marcus <ryan@rmarcus>",
+    "license": "GNU Affero GPLv3",
+    "bugs": {
+	"url": "https://github.com/RyanMarcus/orbits/issues"
+    },
+    "homepage": "https://github.com/RyanMarcus/orbits",
+    "dependencies": {
+	"mocha": "^2.2.4"
+    }
 }
