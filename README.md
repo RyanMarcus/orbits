@@ -1,11 +1,4 @@
-[ ![Codeship Status for RyanMarcus/orbit](https://www.codeship.io/projects/cd23dd10-36c9-0132-5705-2a2ee4030446/status)](https://www.codeship.io/projects/41501)
-
-[![NPM](https://nodei.co/npm/orbits.png?compact=true)](https://nodei.co/npm/orbits/)
-
-
-[![Dependency Status](https://david-dm.org/ryanmarcus/orbits.svg)](https://david-dm.org/ryanmarcus/orbits)
-
-[![Code Climate](https://codeclimate.com/github/RyanMarcus/orbits/badges/gpa.svg)](https://codeclimate.com/github/RyanMarcus/orbits)
+[ ![Codeship Status for RyanMarcus/orbit](https://www.codeship.io/projects/cd23dd10-36c9-0132-5705-2a2ee4030446/status)](https://www.codeship.io/projects/41501) [![Dependency Status](https://david-dm.org/ryanmarcus/orbits.svg)](https://david-dm.org/ryanmarcus/orbits) [![Code Climate](https://codeclimate.com/github/RyanMarcus/orbits/badges/gpa.svg)](https://codeclimate.com/github/RyanMarcus/orbits)
 
 A library for manipulating arbitrary permutations. It is capable of:
 
