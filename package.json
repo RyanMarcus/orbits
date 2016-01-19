@@ -1,13 +1,17 @@
 {
-    "name": "orbits",
-    "version": "0.0.2",
-    "description": "Library to work with algebraic permutations",
+  "name": "orbits",
+  "version": "0.0.2",
+  "description": "Library to work with algebraic permutations",
     "main": "orbits.js",
+    "engines": {
+	"node": "4.0.0"
+    },
     "directories": {
 	"test": "test"
     },
     "scripts": {
 	"test": "node_modules/mocha/bin/mocha"
+	"report": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
     },
     "repository": {
 	"type": "git",
@@ -26,5 +30,8 @@
     "homepage": "https://github.com/RyanMarcus/orbits",
     "dependencies": {
 	"mocha": "^2.2.4"
+    },
+    "devDependencies": {
+	"coveralls": "^2.11.6"
     }
 }
