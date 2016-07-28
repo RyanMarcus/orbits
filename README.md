@@ -1,4 +1,4 @@
-[ ![Codeship Status for RyanMarcus/orbit](https://www.codeship.io/projects/3362ac80-36b8-0134-1a84-2a48b0c8a9e8/status)](https://www.codeship.io/projects/165595) [![Dependency Status](https://david-dm.org/ryanmarcus/orbits.svg)](https://david-dm.org/ryanmarcus/orbits) [![Coverage Status](https://coveralls.io/repos/github/RyanMarcus/orbits/badge.svg?branch=master)](https://coveralls.io/github/RyanMarcus/orbits?branch=master) [![Code Climate](https://codeclimate.com/github/RyanMarcus/orbits/badges/gpa.svg)](https://codeclimate.com/github/RyanMarcus/orbits)
+[ ![Codeship Status for RyanMarcus/orbit](https://www.codeship.io/projects/3362ac80-36b8-0134-1a84-2a48b0c8a9e8/status)](https://www.codeship.io/projects/165595) [![Dependency Status](https://david-dm.org/ryanmarcus/orbits.svg)](https://david-dm.org/ryanmarcus/orbits) [![Codecov](https://img.shields.io/codecov/c/github/RyanMarcus/orbits.svg?maxAge=2592000)](https://codecov.io/gh/RyanMarcus/orbits) [![Code Climate](https://codeclimate.com/github/RyanMarcus/orbits/badges/gpa.svg)](https://codeclimate.com/github/RyanMarcus/orbits)
 
 A library for manipulating arbitrary permutations. It is capable of:
 
